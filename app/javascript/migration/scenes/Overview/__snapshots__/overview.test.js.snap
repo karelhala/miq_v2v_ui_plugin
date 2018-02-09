@@ -117,28 +117,14 @@ exports[`Overview component renders the overview 1`] = `
                                 <h4
                                   className="h1 blank-slate-pf-title"
                                 >
-                                  <FormattedMessage
-                                    id="overview.emptyMappingCardTitle"
-                                    values={Object {}}
-                                  >
-                                    <span>
-                                      Infrastructure Mappings
-                                    </span>
-                                  </FormattedMessage>
+                                  Infrastructure Mappings
                                 </h4>
                               </EmptyStateTitle>
                               <EmptyStateInfo>
                                 <p
                                   className="blank-slate-pf-info"
                                 >
-                                  <FormattedMessage
-                                    id="overview.emptyMappingCardInfo"
-                                    values={Object {}}
-                                  >
-                                    <span>
-                                      Create mapping to later be used by a migration plan.
-                                    </span>
-                                  </FormattedMessage>
+                                  Create mapping to later be used by a migration plan.
                                 </p>
                               </EmptyStateInfo>
                               <EmptyStateAction>
@@ -165,14 +151,7 @@ exports[`Overview component renders the overview 1`] = `
                                         onClick={[Function]}
                                         type="button"
                                       >
-                                        <FormattedMessage
-                                          id="overview.emptyMappingCardButton"
-                                          values={Object {}}
-                                        >
-                                          <span>
-                                            Create Infrastructure Mapping
-                                          </span>
-                                        </FormattedMessage>
+                                        Create Infrastructure Mapping
                                       </button>
                                     </Button>
                                   </Button>
@@ -229,28 +208,14 @@ exports[`Overview component renders the overview 1`] = `
                                 <h4
                                   className="h1 blank-slate-pf-title"
                                 >
-                                  <FormattedMessage
-                                    id="overview.emptyPlanCardTitle"
-                                    values={Object {}}
-                                  >
-                                    <span>
-                                      Migration Plans
-                                    </span>
-                                  </FormattedMessage>
+                                  Migration Plans
                                 </h4>
                               </EmptyStateTitle>
                               <EmptyStateInfo>
                                 <p
                                   className="blank-slate-pf-info"
                                 >
-                                  <FormattedMessage
-                                    id="overview.emptyPlanCardInfo"
-                                    values={Object {}}
-                                  >
-                                    <span>
-                                      Create a migration plan to start migrating.
-                                    </span>
-                                  </FormattedMessage>
+                                  Create a migration plan to start migrating.
                                 </p>
                               </EmptyStateInfo>
                               <EmptyStateAction>
@@ -277,14 +242,7 @@ exports[`Overview component renders the overview 1`] = `
                                         onClick={[Function]}
                                         type="button"
                                       >
-                                        <FormattedMessage
-                                          id="overview.emptyPlanCardButton"
-                                          values={Object {}}
-                                        >
-                                          <span>
-                                            Create Migration Plan
-                                          </span>
-                                        </FormattedMessage>
+                                        Create Migration Plan
                                       </button>
                                     </Button>
                                   </Button>
