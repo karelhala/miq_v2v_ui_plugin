@@ -184,13 +184,9 @@ class DatastoresStepForm extends React.Component {
   }
 
   removeAll() {
-    const { addTargetDatastore, addSourceDatastores, input } = this.props;
-    input.value[0].nodes.forEach(mapping => {
-      const { nodes, ...targetCluster } = mapping;
-      addTargetDatastore(targetCluster);
-      addSourceDatastores(nodes);
-    });
+    const { resetState, input } = this.props;
     input.onChange([]);
+    resetState();
   }
 
   render() {
