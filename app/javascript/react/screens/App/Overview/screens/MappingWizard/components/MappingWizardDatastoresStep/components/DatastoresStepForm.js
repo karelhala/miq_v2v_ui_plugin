@@ -267,5 +267,6 @@ DatastoresStepForm.propTypes = {
   addTargetDatastore: PropTypes.func,
   addSourceDatastores: PropTypes.func,
   sourceDatastores: PropTypes.array,
-  targetDatastores: PropTypes.array
+  targetDatastores: PropTypes.array,
+  resetState: PropTypes.func
 };

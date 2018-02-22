@@ -5,9 +5,8 @@ export const sourceDatastoreFilter = (
   const mappedDatastores = datastoreStepMappings.reduce(
     (mappedDatastoresArray, targetClusterDatastoreMappings) => {
       const sourceDatastores = targetClusterDatastoreMappings.nodes.reduce(
-        (datastores, datastoreMapping) => {
-          return datastores.concat(datastoreMapping.nodes);
-        },
+        (datastores, datastoreMapping) =>
+          datastores.concat(datastoreMapping.nodes),
         []
       );
       return mappedDatastoresArray.concat(sourceDatastores);
@@ -15,11 +14,12 @@ export const sourceDatastoreFilter = (
     []
   );
 
-  return datastoresToFilter.filter(datastore => {
-    return !mappedDatastores.some(mappedDatastore => {
-      return mappedDatastore.id === datastore.id;
-    });
-  });
+  return datastoresToFilter.filter(
+    datastore =>
+      !mappedDatastores.some(
+        mappedDatastore => mappedDatastore.id === datastore.id
+      )
+  );
 };
 
 export const targetDatastoreFilter = (
@@ -27,14 +27,14 @@ export const targetDatastoreFilter = (
   datastoreStepMappings
 ) => {
   const mappedDatastores = datastoreStepMappings.reduce(
-    (mappedDatastoresArray, targetClusterDatastoreMappings) => {
-      return mappedDatastoresArray.concat(targetClusterDatastoreMappings.nodes);
-    },
+    (mappedDatastoresArray, targetClusterDatastoreMappings) =>
+      mappedDatastoresArray.concat(targetClusterDatastoreMappings.nodes),
     []
   );
-  return datastoresToFilter.filter(datastore => {
-    return !mappedDatastores.some(mappedDatastore => {
-      return mappedDatastore.id === datastore.id;
-    });
-  });
+  return datastoresToFilter.filter(
+    datastore =>
+      !mappedDatastores.some(
+        mappedDatastore => mappedDatastore.id === datastore.id
+      )
+  );
 };

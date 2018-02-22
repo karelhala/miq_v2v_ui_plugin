@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import { noop, bindMethods } from 'patternfly-react';
-import { thing } from './MappingWizardDatastoresStepSelectors';
 import SourceClusterSelect from './components/SourceClusterSelect/SourceClusterSelect';
 import DatastoresStepForm from './components/DatastoresStepForm';
 
