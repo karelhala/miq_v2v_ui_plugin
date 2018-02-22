@@ -8,6 +8,11 @@ import DualPaneMapperCount from '../../DualPaneMapper/DualPaneMapperCount';
 import DualPaneMapperListItem from '../../DualPaneMapper/DualPaneMapperListItem';
 import DatastoresStepTreeView from './DatastoresStepTreeView';
 
+import {
+  sourceDatastoreFilter,
+  targetDatastoreFilter
+} from '../MappingWizardDatastoresStepSelectors';
+
 class DatastoresStepForm extends React.Component {
   constructor(props) {
     super(props);
@@ -195,12 +200,13 @@ class DatastoresStepForm extends React.Component {
       selectedTargetDatastore,
       selectedMapping
     } = this.state;
+
     return (
       <div className="dual-pane-mapper-form">
         <DualPaneMapper handleButtonClick={this.addDatastoreMapping}>
           <DualPaneMapperList listTitle="Source Datastores">
             {sourceDatastores &&
-              sourceDatastores.map(item => (
+              sourceDatastoreFilter(sourceDatastores, input.value).map(item => (
                 <DualPaneMapperListItem
                   item={item}
                   key={item.id}
@@ -221,7 +227,7 @@ class DatastoresStepForm extends React.Component {
           </DualPaneMapperList>
           <DualPaneMapperList listTitle="Target Datastores">
             {targetDatastores &&
-              targetDatastores.map(item => (
+              targetDatastoreFilter(targetDatastores, input.value).map(item => (
                 <DualPaneMapperListItem
                   item={item}
                   key={item.id}
