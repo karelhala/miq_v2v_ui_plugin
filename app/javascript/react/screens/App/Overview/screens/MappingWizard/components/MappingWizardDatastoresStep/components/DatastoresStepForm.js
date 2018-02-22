@@ -199,7 +199,15 @@ class DatastoresStepForm extends React.Component {
 
     return (
       <div className="dual-pane-mapper-form">
-        <DualPaneMapper handleButtonClick={this.addDatastoreMapping}>
+        <DualPaneMapper
+          handleButtonClick={this.addDatastoreMapping}
+          validMapping={
+            !(
+              selectedTargetDatastore &&
+              (selectedSourceDatastores && selectedSourceDatastores.length > 0)
+            )
+          }
+        >
           <DualPaneMapperList listTitle="Source Datastores">
             {sourceDatastores &&
               sourceDatastoreFilter(sourceDatastores, input.value).map(item => (
